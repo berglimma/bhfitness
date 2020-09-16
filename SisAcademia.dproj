@@ -1,0 +1,254 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A234D7E1-F429-40C1-909A-F373F8D5C8E4}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>SisAcademia.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;rtl;vcldb;QR5Run_RAD6;bdertl;vclactnband;dbrtl;vcldbx;dsnap;dsnapcon;TeeUI;TeeDB;Tee;adortl;vclib;ibxpress;IndyCore;IndySystem;IndyProtocols;xmlrtl;inet;intrawebdb_100_120;Intraweb_100_120;VclSmp;vclie;soaprtl;inetdbbde;inetdbxpress;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DataSnapServer;DbxClientDriver;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;websnap;webdsnap;rbCIDE1212;rbIDE1212;rbRCL1212;rbBDE1212;rbUSERDesign1212;rbUSER1212;rbDIDE1212;rbDAD1212;dclRBBDE1212;rbDBDE1212;rbDB1212;dclRBADO1212;rbADO1212;dclRBDBE1212;rbDBE1212;rxbde;rxctl;rxdb</DCC_UsePackage>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DependencyCheckOutputName>SisAcademia.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="SisAcademia.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="U_AjudaDiametro.pas">
+				<Form>FRM_AjudaDiametro</Form>
+			</DCCReference>
+			<DCCReference Include="U_Alunos.pas">
+				<Form>FRM_CadAlunos</Form>
+			</DCCReference>
+			<DCCReference Include="U_Aniversariantes.pas">
+				<Form>FRM_Aniversariantes</Form>
+			</DCCReference>
+			<DCCReference Include="U_AvaliacaoFisica.pas">
+				<Form>FRM_AvaliacaoFisica</Form>
+			</DCCReference>
+			<DCCReference Include="U_AvaliacaoFisicaCadastradas.pas">
+				<Form>FRM_AvaFisicaCadastradas</Form>
+			</DCCReference>
+			<DCCReference Include="U_Backup.pas">
+				<Form>FRM_Backup</Form>
+			</DCCReference>
+			<DCCReference Include="U_BloqueiaMatricula.pas">
+				<Form>FRM_BloqueiaMatricula</Form>
+			</DCCReference>
+			<DCCReference Include="U_Busca.pas">
+				<Form>FRM_Busca</Form>
+			</DCCReference>
+			<DCCReference Include="U_BuscaFichaTreino.pas">
+				<Form>FRM_BuscaFichaTreino</Form>
+			</DCCReference>
+			<DCCReference Include="U_BuscaModalidades.pas">
+				<Form>FRM_BuscaModalidades</Form>
+			</DCCReference>
+			<DCCReference Include="U_CadContasReceber.pas">
+				<Form>FRM_CadContasReceber</Form>
+			</DCCReference>
+			<DCCReference Include="U_CadExercicio.pas">
+				<Form>FRM_CadExercicio</Form>
+			</DCCReference>
+			<DCCReference Include="U_CadExercicios.pas">
+				<Form>FRM_Exercicios</Form>
+			</DCCReference>
+			<DCCReference Include="U_CadFornecedor.pas">
+				<Form>FRM_CadFornecedor</Form>
+			</DCCReference>
+			<DCCReference Include="U_CadPlanoContas.pas">
+				<Form>FRM_CadPlanoContas</Form>
+			</DCCReference>
+			<DCCReference Include="U_CadTreino.pas">
+				<Form>FRM_CadTreino</Form>
+			</DCCReference>
+			<DCCReference Include="U_CadUsuarios.pas">
+				<Form>FRM_CadUsuarios</Form>
+			</DCCReference>
+			<DCCReference Include="U_ContasPagar.pas">
+				<Form>FRM_ContasPagar</Form>
+			</DCCReference>
+			<DCCReference Include="U_ContasReceber.pas">
+				<Form>FRM_ContasReceber</Form>
+			</DCCReference>
+			<DCCReference Include="U_ControleMatricula.pas">
+				<Form>FRM_ControleMatricula</Form>
+			</DCCReference>
+			<DCCReference Include="U_DetalhamentoRecebimentos.pas">
+				<Form>FRM_DetalhamentoRecebimentos</Form>
+			</DCCReference>
+			<DCCReference Include="U_DM.pas">
+				<Form>DM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="U_Empresa.pas">
+				<Form>FRM_CadEmpresa</Form>
+			</DCCReference>
+			<DCCReference Include="U_FichaTreino.pas">
+				<Form>FRM_FichaTreino</Form>
+			</DCCReference>
+			<DCCReference Include="U_FluxoCaixa.pas">
+				<Form>FRM_FluxoCaixa</Form>
+			</DCCReference>
+			<DCCReference Include="U_FornecedoresGeral.pas">
+				<Form>FRM_FornecedoresGeral</Form>
+			</DCCReference>
+			<DCCReference Include="U_GerarContasPagar.pas">
+				<Form>FRM_GerarContasPagar</Form>
+			</DCCReference>
+			<DCCReference Include="U_GraficoFluxo.pas">
+				<Form>FRM_GraficoFluxo</Form>
+			</DCCReference>
+			<DCCReference Include="U_ImpPaciente.pas">
+				<Form>FRM_ImpPaciente</Form>
+			</DCCReference>
+			<DCCReference Include="U_LancarContasPagar.pas">
+				<Form>FRM_CadContasPagar</Form>
+			</DCCReference>
+			<DCCReference Include="U_Login.pas">
+				<Form>FRM_Login</Form>
+			</DCCReference>
+			<DCCReference Include="U_Matricula.pas">
+				<Form>FRM_Matricula</Form>
+			</DCCReference>
+			<DCCReference Include="U_Modalidade.pas">
+				<Form>FRM_Modalidades</Form>
+			</DCCReference>
+			<DCCReference Include="U_Objetivos.pas">
+				<Form>FRM_Objetivos</Form>
+			</DCCReference>
+			<DCCReference Include="U_Pacientes.pas">
+				<Form>FRM_CadPacientes</Form>
+			</DCCReference>
+			<DCCReference Include="U_AlunosGeral.pas">
+				<Form>FRM_AlunosGeral</Form>
+			</DCCReference>
+			<DCCReference Include="U_PlanoContas.pas">
+				<Form>FRM_PlanoContas</Form>
+			</DCCReference>
+			<DCCReference Include="U_Principal.pas">
+				<Form>FRM_Principal</Form>
+			</DCCReference>
+			<DCCReference Include="U_RealizarPagamento.pas">
+				<Form>FRM_RealizarPagamento</Form>
+			</DCCReference>
+			<DCCReference Include="U_ReciboMensalidade.pas">
+				<Form>FRM_ReciboMensalidade</Form>
+			</DCCReference>
+			<DCCReference Include="U_Relatorios.pas">
+				<Form>FRM_Relatorio</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelRecebimento.pas">
+				<Form>FRM_Receber</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelRecebimentoAluno.pas">
+				<Form>FRM_RecebimentoAluno</Form>
+			</DCCReference>
+			<DCCReference Include="U_Sobre.pas">
+				<Form>FRM_Sobre</Form>
+			</DCCReference>
+			<DCCReference Include="U_Splash.pas">
+				<Form>FRM_Splash</Form>
+			</DCCReference>
+			<DCCReference Include="U_VisaoGeral.pas">
+				<Form>FRM_VisaoGeral</Form>
+			</DCCReference>
+			<DCCReference Include="U_CapturaWebCam.pas">
+				<Form>FRM_CapturaWebCam</Form>
+			</DCCReference>
+			<DCCReference Include="U_Postural1.pas">
+				<Form>FRM_CapturaPostural1</Form>
+			</DCCReference>
+			<DCCReference Include="U_Postural2.pas">
+				<Form>FRM_CapturaPostural2</Form>
+			</DCCReference>
+			<DCCReference Include="U_Postural3.pas">
+				<Form>FRM_CapturaPostural3</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelAlunosModalidades.pas">
+				<Form>FRM_RelAlunosModalidades</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">SisAcademia.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages/>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
